@@ -12,3 +12,28 @@
 // and append it to the DOM inside the div.header-container
 
 function Header() {}
+
+function Header() {
+  const header = document.createElement('header');
+  console.log(header)
+  const date = document.createElement('date');
+  const lambdaH1 = document.createElement('h1');
+  const temp = document.createElement('span');
+
+  header.appendChild(date);
+  header.appendChild(lambdaH1);
+  header.appendChild(temp);
+
+  header.classList.add('header');
+  date.classList.add('date');
+  temp.classList.add('temp');
+
+  date.textContent = 'March 13. 2020';
+  lambdaH1.textContent = 'Lambda Times';
+  temp.textContent = '98'
+  return header
+}
+
+document.querySelector('.header-container').append(Header());
+
+
